@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IdleShirt
+  m_Name: IdlePansLeft
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -63852667, guid: b7f59df90acf8214d8aae81baa8dd491, type: 3}
+      value: {fileID: -410264235, guid: 007b8168ec73d40458d4df1ac2868fc5, type: 3}
     - time: 0.083333336
-      value: {fileID: -63852667, guid: b7f59df90acf8214d8aae81baa8dd491, type: 3}
+      value: {fileID: -410264235, guid: 007b8168ec73d40458d4df1ac2868fc5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -63852667, guid: b7f59df90acf8214d8aae81baa8dd491, type: 3}
-    - {fileID: -63852667, guid: b7f59df90acf8214d8aae81baa8dd491, type: 3}
+    - {fileID: -410264235, guid: 007b8168ec73d40458d4df1ac2868fc5, type: 3}
+    - {fileID: -410264235, guid: 007b8168ec73d40458d4df1ac2868fc5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

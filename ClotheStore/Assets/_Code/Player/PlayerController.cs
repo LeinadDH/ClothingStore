@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FloatEventChannelSO _lastHorizontalInput;
     [SerializeField] private FloatEventChannelSO _lastVerticalInput;
     [SerializeField] private BoolEventChannelSO _isChoppingDown;
+    [SerializeField] private BoolValue _canChoppingDown;
     private Rigidbody2D _rb;
     private Vector2 _movement;
     
@@ -25,14 +26,17 @@ public class PlayerController : MonoBehaviour
             _lastHorizontalInput.RaiseEvent(_movement.x);
             _lastVerticalInput.RaiseEvent(_movement.y);
         }
-        
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (_canChoppingDown.value)
         {
-            _isChoppingDown.RaiseEvent(true);
-        }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            _isChoppingDown.RaiseEvent(false);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _isChoppingDown.RaiseEvent(true);
+            }
+            else if (Input.GetKeyUp(KeyCode.Space))
+            {
+                _isChoppingDown.RaiseEvent(false);
+            }
         }
     }
     
