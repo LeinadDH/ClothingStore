@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed = 5.0f;  
     [SerializeField] private FloatEventChannelSO _horizontalInput;
     [SerializeField] private FloatEventChannelSO _verticalInput;
+    [SerializeField] private FloatEventChannelSO _lastHorizontalInput;
+    [SerializeField] private FloatEventChannelSO _lastVerticalInput;
     [SerializeField] private BoolEventChannelSO _isChoppingDown;
     private Rigidbody2D _rb;
     private Vector2 _movement;
@@ -18,6 +20,11 @@ public class PlayerController : MonoBehaviour
     {
         _horizontalInput.RaiseEvent(_movement.x);
         _verticalInput.RaiseEvent(_movement.y);
+        if (_movement != Vector2.zero)
+        {
+            _lastHorizontalInput.RaiseEvent(_movement.x);
+            _lastVerticalInput.RaiseEvent(_movement.y);
+        }
         
         if (Input.GetKeyDown(KeyCode.Space))
         {

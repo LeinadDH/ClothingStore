@@ -374,6 +374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horizontalInput: {fileID: 11400000, guid: 74e0f3111bd8e894dbe6cf62d1be79c5, type: 2}
   _verticalInput: {fileID: 11400000, guid: b20ceb44d63bd214d98004eda4cdd85a, type: 2}
+  _lastHorizontalInput: {fileID: 0}
+  _lastVerticalInput: {fileID: 0}
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
 --- !u!1 &519420028
 GameObject:
@@ -644,7 +646,8 @@ MonoBehaviour:
   _speed: 5
   _horizontalInput: {fileID: 11400000, guid: 74e0f3111bd8e894dbe6cf62d1be79c5, type: 2}
   _verticalInput: {fileID: 11400000, guid: b20ceb44d63bd214d98004eda4cdd85a, type: 2}
-  _speedValue: {fileID: 11400000, guid: 39fc87cbd1210f14798a477042e33f57, type: 2}
+  _lastHorizontalInput: {fileID: 11400000, guid: 39fc87cbd1210f14798a477042e33f57, type: 2}
+  _lastVerticalInput: {fileID: 11400000, guid: de3ed0b7b1c4c3c49866617bdf038e63, type: 2}
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
 --- !u!114 &1718503528
 MonoBehaviour:
@@ -660,6 +663,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horizontalInput: {fileID: 11400000, guid: 74e0f3111bd8e894dbe6cf62d1be79c5, type: 2}
   _verticalInput: {fileID: 11400000, guid: b20ceb44d63bd214d98004eda4cdd85a, type: 2}
+  _lastHorizontalInput: {fileID: 11400000, guid: 39fc87cbd1210f14798a477042e33f57, type: 2}
+  _lastVerticalInput: {fileID: 11400000, guid: de3ed0b7b1c4c3c49866617bdf038e63, type: 2}
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
 --- !u!61 &1718503529
 BoxCollider2D:
@@ -869,6 +874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _horizontalInput: {fileID: 11400000, guid: 74e0f3111bd8e894dbe6cf62d1be79c5, type: 2}
   _verticalInput: {fileID: 11400000, guid: b20ceb44d63bd214d98004eda4cdd85a, type: 2}
+  _lastHorizontalInput: {fileID: 0}
+  _lastVerticalInput: {fileID: 0}
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

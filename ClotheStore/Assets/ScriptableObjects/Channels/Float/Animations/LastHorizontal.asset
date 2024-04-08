@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf82ac850c0247148890e46b9c0aca41, type: 3}
-  m_Name: SpeedValue
+  m_Name: LastHorizontal
   m_EditorClassIdentifier: 
