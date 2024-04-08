@@ -5,23 +5,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _speed = 5.0f;  
     [SerializeField] private FloatEventChannelSO _horizontalInput;
     [SerializeField] private FloatEventChannelSO _verticalInput;
-    [SerializeField] private FloatEventChannelSO _speedValue;
     [SerializeField] private BoolEventChannelSO _isChoppingDown;
     private Rigidbody2D _rb;
-    private Vector2 movement;
+    private Vector2 _movement;
     
-    void Start()
+    void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        movement.x = Input.GetAxis("Horizontal");
-        movement.y = Input.GetAxis("Vertical");
-        _horizontalInput.RaiseEvent(movement.x);
-        _verticalInput.RaiseEvent(movement.y);
-        _speedValue.RaiseEvent(movement.sqrMagnitude);
+        _horizontalInput.RaiseEvent(_movement.x);
+        _verticalInput.RaiseEvent(_movement.y);
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -35,6 +31,7 @@ public class PlayerController : MonoBehaviour
     
     void FixedUpdate()
     {
-        _rb.MovePosition(_rb.position + movement * _speed * Time.fixedDeltaTime);
+        _movement.Set(InputManagger.Movement.x, InputManagger.Movement.y); 
+        _rb.velocity = _movement * _speed;
     }
 }
