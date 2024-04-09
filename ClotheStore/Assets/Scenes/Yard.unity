@@ -5641,7 +5641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 0}
+  m_AnchoredPosition: {x: 50, y: -10}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554561177
@@ -5666,8 +5666,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 680ed774a50c6ab4ba8a3f6b00a1c4f9, type: 2}
-  m_sharedMaterial: {fileID: 452062149373406384, guid: 680ed774a50c6ab4ba8a3f6b00a1c4f9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f7673135754d5334694dac83b45faa43, type: 2}
+  m_sharedMaterial: {fileID: -9081154273788760483, guid: f7673135754d5334694dac83b45faa43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5691,7 +5691,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 51.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17640,7 +17640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -64.80733, y: 0.000030517578}
+  m_AnchoredPosition: {x: -73.055534, y: 0.000030517578}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798434390
@@ -19754,6 +19754,7 @@ GameObject:
   - component: {fileID: 2058718275}
   - component: {fileID: 2058718277}
   - component: {fileID: 2058718276}
+  - component: {fileID: 2058718278}
   m_Layer: 5
   m_Name: Trunks
   m_TagString: Untagged
@@ -19820,6 +19821,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058718274}
   m_CullTransparentMesh: 1
+--- !u!114 &2058718278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058718274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3710cf2ea5072bb41a6b6fe6028471bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trunk: {fileID: 11400000, guid: e80f79cfab626e0488b3efb4ee77e8e9, type: 2}
+  _trunkText: {fileID: 554561177}
 --- !u!1 &2074039682
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
             _lastHorizontalInput.RaiseEvent(_movement.x);
             _lastVerticalInput.RaiseEvent(_movement.y);
             _lookDirection = _movement.normalized;
+            CheckTree();
         }
         
         if (Input.GetKeyDown(KeyCode.Space))
@@ -40,9 +41,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
-            _isChoppingDown.RaiseEvent(false);
-            _isChopping = false;
-            CancelInvoke("IncrementTrunk");
+            DisableTurckCollect();
         }
     }
     
@@ -75,10 +74,29 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
-        else if((hit.collider == null))
+    }
+
+    void CheckTree()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, _lookDirection, _rayLength, ~_ignoreLayers);
+        if (hit.collider != null)
         {
-            _isChoppingDown.RaiseEvent(false);
+            if (!hit.collider.CompareTag("Tree"))
+            {
+                DisableTurckCollect();
+            }
         }
+        if(hit.collider == null)
+        {
+            DisableTurckCollect();
+        }
+    }
+
+    void DisableTurckCollect()
+    {
+        _isChoppingDown.RaiseEvent(false);
+        _isChopping = false;
+        CancelInvoke("IncrementTrunk");
     }
     
     void IncrementTrunk()
