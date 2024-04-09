@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FloatEventChannelSO _lastVerticalInput;
     [SerializeField] private BoolEventChannelSO _isChoppingDown;
     [SerializeField] private BoolValue _canChoppingDown;
+    [SerializeField] private IntValue _trunk;
     private Rigidbody2D _rb;
     private Vector2 _movement;
     private Vector2 _lookDirection;
-
+    private bool _isChopping = false;
+    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -33,14 +35,15 @@ public class PlayerController : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            _isChopping = true;
             ShootRaycast();
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             _isChoppingDown.RaiseEvent(false);
+            _isChopping = false;
+            CancelInvoke("IncrementTrunk");
         }
-
-        
     }
     
     void FixedUpdate()
@@ -61,6 +64,7 @@ public class PlayerController : MonoBehaviour
                     if (_canChoppingDown.value)
                     {
                         _isChoppingDown.RaiseEvent(true);
+                        if (_isChopping) InvokeRepeating("IncrementTrunk", 2f, 2f);
                     }
                     break;
                 case "Axe":
@@ -71,6 +75,15 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
+        else if((hit.collider == null))
+        {
+            _isChoppingDown.RaiseEvent(false);
+        }
+    }
+    
+    void IncrementTrunk()
+    {
+        _trunk.value++;
     }
 
     void OnDrawGizmos()
