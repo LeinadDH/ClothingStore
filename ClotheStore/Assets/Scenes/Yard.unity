@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3710cf2ea5072bb41a6b6fe6028471bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trunk: {fileID: 11400000, guid: e80f79cfab626e0488b3efb4ee77e8e9, type: 2}
+  _trunk: {fileID: 11400000, guid: 7b4108cceffcbba43a2cae634b31530b, type: 2}
   _trunkText: {fileID: 1590463391}
 --- !u!114 &184857851
 MonoBehaviour:
@@ -5977,7 +5977,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: Store
-  _axe: {fileID: 1266095482}
 --- !u!1 &582350002
 GameObject:
   m_ObjectHideFlags: 0
@@ -12563,11 +12562,6 @@ Transform:
   - {fileID: 1521350165}
   m_Father: {fileID: 1400561493}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1266095482 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1902474598938177948, guid: 65bdaaceed92ad1499232e97c21c0b3b, type: 3}
-  m_PrefabInstance: {fileID: 5050374698383591254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1274381238
 GameObject:
   m_ObjectHideFlags: 0
@@ -20898,10 +20892,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2950072496900066039, guid: 65bdaaceed92ad1499232e97c21c0b3b, type: 3}
-      propertyPath: _axe
-      value: 
-      objectReference: {fileID: 1266095482}
     - target: {fileID: 4670474740044870137, guid: 65bdaaceed92ad1499232e97c21c0b3b, type: 3}
       propertyPath: m_Name
       value: Player

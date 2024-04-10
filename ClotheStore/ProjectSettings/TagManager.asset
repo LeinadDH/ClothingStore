@@ -8,6 +8,7 @@ TagManager:
   - Axe
   - Door
   - Shop
+  - Clothes
   layers:
   - Default
   - TransparentFX

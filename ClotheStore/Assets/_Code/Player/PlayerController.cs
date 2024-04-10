@@ -78,6 +78,9 @@ public class PlayerController : MonoBehaviour
                 case "Shop":
                     hit.collider.gameObject.GetComponent<Shop>().Charge();
                     break;
+                case "Clothes":
+                    hit.collider.gameObject.GetComponent<Shop>().BuyClothes();
+                    break;
             }
         }
     }
