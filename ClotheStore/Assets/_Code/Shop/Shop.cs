@@ -6,6 +6,17 @@ public class Shop : MonoBehaviour
     [SerializeField] private IntValue _coins;
     [SerializeField] private int _clothesPrice = 0;
     
+    [SerializeField] private BoolValue _getObject;
+    [SerializeField] private BoolValue _boughtObject;
+    
+    private void Start()
+    {
+        if (_boughtObject.value)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+    
     public void Charge()
     {
         if (_trunks.value >= 5)
@@ -21,6 +32,8 @@ public class Shop : MonoBehaviour
         if (_coins.value >= _clothesPrice)
         {
             _coins.value -= _clothesPrice;
+            _getObject.value = true;
+            _boughtObject.value = true;
             gameObject.SetActive(false);
         }
     }

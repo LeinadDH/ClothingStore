@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ca29e6e957fa143a341dec29c252df, type: 3}
   m_Name: Trunks
   m_EditorClassIdentifier: 
-  value: 2
+  value: 0

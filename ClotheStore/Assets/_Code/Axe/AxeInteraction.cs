@@ -1,20 +1,24 @@
+using System;
 using UnityEngine;
 
 public class AxeInteraction : MonoBehaviour
 {
     [SerializeField] private BoolValue _getAxe;
+    [SerializeField] private BoolValue _boughtAxe;
     [SerializeField] private BoolValue _canChoppingDown;
-    void Start()
+
+    private void Start()
     {
-        if (_getAxe.value)
+        if (_boughtAxe.value)
         {
             gameObject.SetActive(false);
         }
     }
-    
-    private void OnDisable()
+
+    public void BoughtAxe()
     {
+        _boughtAxe.value = true;
+        //_canChoppingDown.value = true;
         _getAxe.value = true;
-        _canChoppingDown.value = true;
     }
 }

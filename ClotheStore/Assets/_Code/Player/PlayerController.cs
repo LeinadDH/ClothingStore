@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private BoolEventChannelSO _isChoppingDown;
     [SerializeField] private BoolValue _canChoppingDown;
     [SerializeField] private IntValue _trunk;
+    [SerializeField] private GameObject _inventory;
+    [SerializeField] private GameObject _playerequip;
     private Rigidbody2D _rb;
     private Vector2 _movement;
     private Vector2 _lookDirection;
@@ -22,9 +23,16 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _inventory.SetActive(true);
+        _playerequip.SetActive(true);
     }
-    
-    
+
+    private void Start()
+    {
+        _inventory.SetActive(false);
+        _playerequip.SetActive(false);
+    }
+
     void Update()
     {
         _horizontalInput.RaiseEvent(_movement.x);
@@ -45,6 +53,16 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             DisableTurckCollect();
+        }
+        if(Input.GetKeyDown(KeyCode.Tab))
+        {
+            _inventory.SetActive(true);
+            _playerequip.SetActive(true);
+        }
+        if(Input.GetKeyUp(KeyCode.Tab))
+        {
+            _inventory.SetActive(false);
+            _playerequip.SetActive(false);
         }
     }
     
@@ -70,6 +88,7 @@ public class PlayerController : MonoBehaviour
                     }
                     break;
                 case "Axe":
+                    hit.collider.gameObject.GetComponent<AxeInteraction>().BoughtAxe();
                     hit.collider.gameObject.SetActive(false);
                     break;
                 case "Door":

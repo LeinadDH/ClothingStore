@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &808360808938132726
 Transform:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &83559674890650025
 Transform:
   m_ObjectHideFlags: 0
@@ -266,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8634601723676565763
 Transform:
   m_ObjectHideFlags: 0
@@ -388,7 +388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3370883331084310122
 Transform:
   m_ObjectHideFlags: 0
@@ -511,6 +511,7 @@ GameObject:
   - component: {fileID: 288245102800722375}
   - component: {fileID: 2950072496900066039}
   - component: {fileID: 4832226416769174805}
+  - component: {fileID: 5973539872668125190}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -749,7 +750,8 @@ MonoBehaviour:
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
   _canChoppingDown: {fileID: 11400000, guid: d7a457d2c25b52741945e74101ad71cb, type: 2}
   _trunk: {fileID: 11400000, guid: e80f79cfab626e0488b3efb4ee77e8e9, type: 2}
-  _axe: {fileID: 1902474598938177948}
+  _inventory: {fileID: 0}
+  _playerequip: {fileID: 0}
 --- !u!114 &4832226416769174805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,6 +769,28 @@ MonoBehaviour:
   _lastHorizontalInput: {fileID: 11400000, guid: 39fc87cbd1210f14798a477042e33f57, type: 2}
   _lastVerticalInput: {fileID: 11400000, guid: de3ed0b7b1c4c3c49866617bdf038e63, type: 2}
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
+--- !u!114 &5973539872668125190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4670474740044870137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf5a407c26e45641925633e67648a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canUseAxe: {fileID: 11400000, guid: b8cd4acada3171141b851260a82167d7, type: 2}
+  _canUseSpacebuns: {fileID: 11400000, guid: 6cc19a93abc2f1b43832f5568aa0c71e, type: 2}
+  _canUseShirt: {fileID: 11400000, guid: f0c527a36a87b7e4cbe1038a3dc84f14, type: 2}
+  _canUsePants: {fileID: 11400000, guid: 1f624bc689b38444a8a33e585023e466, type: 2}
+  _canUseShoes: {fileID: 11400000, guid: 5ced38b598d8cc049bf889a3bb6ad41c, type: 2}
+  _axe: {fileID: 0}
+  _spacebuns: {fileID: 0}
+  _shirt: {fileID: 0}
+  _pants: {fileID: 0}
+  _shoes: {fileID: 0}
 --- !u!1 &5408058242594706613
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,7 +809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3848674135125601953
 Transform:
   m_ObjectHideFlags: 0
