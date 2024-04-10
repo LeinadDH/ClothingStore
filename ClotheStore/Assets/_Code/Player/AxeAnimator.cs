@@ -15,16 +15,17 @@ public class AxeAnimator : MonoBehaviour
 
     private void OnEnable()
     {
+        _animator = GetComponent<Animator>();
         _lastHorizontalInput.FloatEvent += HandleLastHorizontalInput;
         _lastVerticalInput.FloatEvent += HandleLastVerticalInput;
-        _isChoppingDown.BoolEvent += isChoppingDown => _animator.SetBool("IsChoppingDown", isChoppingDown);
+        _isChoppingDown.BoolEvent += HandleIsChoppingDown;
     }
     
     private void OnDisable()
     {
         _lastHorizontalInput.FloatEvent -= HandleLastHorizontalInput;
         _lastVerticalInput.FloatEvent -= HandleLastVerticalInput;
-        _isChoppingDown.BoolEvent -= isChoppingDown => _animator.SetBool("IsChoppingDown", isChoppingDown);
+        _isChoppingDown.BoolEvent -= HandleIsChoppingDown;
     }
     
     void HandleLastHorizontalInput(float value)
@@ -35,5 +36,10 @@ public class AxeAnimator : MonoBehaviour
     void HandleLastVerticalInput(float value)
     {
         _animator.SetFloat("LastVertical", value);
+    }
+    
+    void HandleIsChoppingDown(bool value)
+    {
+        _animator.SetBool("IsChoppingDown", value);
     }
 }

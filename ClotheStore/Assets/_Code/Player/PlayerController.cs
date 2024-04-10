@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -17,11 +18,13 @@ public class PlayerController : MonoBehaviour
     private Vector2 _lookDirection;
     private bool _isChopping = false;
     
+    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
-
+    
+    
     void Update()
     {
         _horizontalInput.RaiseEvent(_movement.x);
@@ -71,6 +74,9 @@ public class PlayerController : MonoBehaviour
                     break;
                 case "Door":
                     hit.collider.gameObject.GetComponent<Door>().ChangeScene();
+                    break;
+                case "Shop":
+                    hit.collider.gameObject.GetComponent<Shop>().Charge();
                     break;
             }
         }

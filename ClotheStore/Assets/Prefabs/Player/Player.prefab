@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6765410909105213607}
   - component: {fileID: 4159126790249443682}
   - component: {fileID: 6739948036218333689}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 1144241268295040202}
   - component: {fileID: 4113719821712194083}
   - component: {fileID: 6957520945956045703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shoes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 3019709173469628622}
   - component: {fileID: 6089082286073366585}
   - component: {fileID: 418182955446662241}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   - component: {fileID: 7348345946648034305}
   - component: {fileID: 2067256554569988248}
   - component: {fileID: 250996832596778768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Shirt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 288245102800722375}
   - component: {fileID: 2950072496900066039}
   - component: {fileID: 4832226416769174805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -738,12 +738,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _rayLength: 1.2
+  _ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 72
   _horizontalInput: {fileID: 11400000, guid: 74e0f3111bd8e894dbe6cf62d1be79c5, type: 2}
   _verticalInput: {fileID: 11400000, guid: b20ceb44d63bd214d98004eda4cdd85a, type: 2}
   _lastHorizontalInput: {fileID: 11400000, guid: 39fc87cbd1210f14798a477042e33f57, type: 2}
   _lastVerticalInput: {fileID: 11400000, guid: de3ed0b7b1c4c3c49866617bdf038e63, type: 2}
   _isChoppingDown: {fileID: 11400000, guid: 869ce612f466e30479fdacae3ec032a1, type: 2}
   _canChoppingDown: {fileID: 11400000, guid: d7a457d2c25b52741945e74101ad71cb, type: 2}
+  _trunk: {fileID: 11400000, guid: e80f79cfab626e0488b3efb4ee77e8e9, type: 2}
+  _axe: {fileID: 1902474598938177948}
 --- !u!114 &4832226416769174805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +779,7 @@ GameObject:
   - component: {fileID: 4146586264449570564}
   - component: {fileID: 1690989527714672237}
   - component: {fileID: 4767186482295349871}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SpaceBuns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
